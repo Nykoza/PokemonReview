@@ -6,7 +6,7 @@ using PokemonReviewApp.Models;
 
 namespace PokemonReviewApp.Controllers;
 
-[Route("api/pokemon")]
+[Route("api/[controller]")]
 [ApiController]
 public class PokemonController: ControllerBase
 {
@@ -23,7 +23,7 @@ public class PokemonController: ControllerBase
     [ProducesResponseType(200, Type = typeof(IEnumerable<Pokemon>))]
     public IActionResult GetPokemons()
     {
-        var pokemons = _mapper.Map<List<PokemonDto>>(_pokemonRepository.GetPokemons());
+        List<PokemonDto> pokemons = _mapper.Map<List<PokemonDto>>(_pokemonRepository.GetPokemons());
         
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
