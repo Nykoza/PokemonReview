@@ -41,7 +41,6 @@ public class CategoryController: ControllerBase
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
-
         return Ok(category);
     }
     
