@@ -73,7 +73,7 @@ public class CountryController : ControllerBase
     [HttpPost]
     [ProducesResponseType(204)]
     [ProducesResponseType(400)]
-    public IActionResult CreateCountry([FromBody] CountryDto countryCreate)
+    public IActionResult CreateCountry([FromBody] CountryDto? countryCreate)
     {
         if (countryCreate == null)
             return BadRequest(ModelState);

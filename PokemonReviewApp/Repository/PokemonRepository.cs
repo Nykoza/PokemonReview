@@ -45,7 +45,7 @@ public class PokemonRepository: IPokemonRepository
         return _context.Pokemon.Any(p => p.Id == pokeId);
     }
 
-    public bool CreatePokemon(int ownerId, int categoryId, Pokemon pokemon)
+    public bool CreatePokemon(int categoryId, int ownerId, Pokemon pokemon)
     {
         var pokemonOwnerEntity = _context.Owners.Where(a => a.Id == ownerId).FirstOrDefault();
         var category = _context.Categories.Where(a => a.Id == categoryId).FirstOrDefault();
