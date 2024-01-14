@@ -8,4 +8,6 @@ public interface IReviewRepository
     Task<Review> GetReview(int reviewId);
     Task<ICollection<Review>> GetReviewsOfAPokemon(int pokeId);
     bool ReviewExists(int reviewId);
+    bool CreateReview(Review review);
+    bool Save();
 }
