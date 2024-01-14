@@ -46,6 +46,12 @@ public class OwnerRepository: IOwnerRepository
         return Save();
     }
 
+    public bool UpdateOwner(Owner owner)
+    {
+        _context.Update(owner);
+        return Save();
+    }
+
     public bool Save()
     {
         var saved = _context.SaveChanges();
