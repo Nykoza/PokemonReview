@@ -9,4 +9,6 @@ public interface IOwnerRepository
     Task<ICollection<Owner>> GetOwnerOfAPokemon(int pokemonId);
     Task<ICollection<Pokemon>> GetPokemonByOwner(int ownerId);
     bool OwnerExists(int ownerId);
+    bool CreateOwner(Owner owner);
+    bool Save();
 }
