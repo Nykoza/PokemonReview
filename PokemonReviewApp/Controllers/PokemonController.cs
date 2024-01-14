@@ -61,4 +61,13 @@ public class PokemonController: ControllerBase
     
         return Ok(rating);
     }
+
+    // [HttpPost]
+    // [ProducesResponseType(204)]
+    // [ProducesResponseType(400)]
+    // public IActionResult CreatePokemon([FromQuery] int owner, [FromQuery] int categoryId,[FromBody] OwnerDto pokemonCreate)
+    // {
+    //     if (pokemonCreate == null)
+    //         return BadRequest(ModelState);
+    // }
 }

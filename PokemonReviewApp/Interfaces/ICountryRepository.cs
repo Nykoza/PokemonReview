@@ -9,4 +9,6 @@ public interface ICountryRepository
     Country GetCountryByOwner(int ownerId);
     Task<ICollection<Owner>> GetOwnersFromACountry(int countryId);
     bool CountryExists(int id);
+    bool CreateCountry(Country country);
+    bool Save();
 }

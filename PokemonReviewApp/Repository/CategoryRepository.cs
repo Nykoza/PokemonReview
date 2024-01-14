@@ -33,4 +33,16 @@ public class CategoryRepository: ICategoryRepository
     {
         return _context.Categories.Any(c => c.Id == id);
     }
+
+    public bool CreateCategory(Category category)
+    {
+        _context.Add(category);
+        return Save();
+    }
+
+    public bool Save()
+    {
+        var saved = _context.SaveChanges();
+        return saved > 0;
+    }
 }

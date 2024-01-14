@@ -39,4 +39,16 @@ public class CountryRepository: ICountryRepository
     {
         return await _context.Owners.Where(o => o.Country.Id == countryId).ToListAsync();
     }
+    
+    public bool CreateCountry(Country country)
+    {
+        _context.Add(country);
+        return Save();
+    }
+
+    public bool Save()
+    {
+        var saved = _context.SaveChanges();
+        return saved > 0;
+    }
 }
