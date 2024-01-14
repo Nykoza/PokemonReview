@@ -75,7 +75,7 @@ public class OwnerController: ControllerBase
 
         var owners = await _ownerRepository
             .GetOwners();
-        var owner = owners.FirstOrDefault(c => c.Name.Trim().ToUpper() == ownerCreate.Name.Trim());
+        var owner = owners.FirstOrDefault(c => c.Name.Trim().ToUpper() == ownerCreate.Name.Trim().ToUpper());
 
         if (owner != null)
         {

@@ -73,7 +73,7 @@ public class ReviewController: ControllerBase
             return BadRequest(ModelState);
 
         var reviews = await _reviewRepository.GetReviews();
-        var review = reviews.FirstOrDefault(r => r.Title.Trim().ToUpper() == reviewCreate.Title.Trim());
+        var review = reviews.FirstOrDefault(r => r.Title.Trim().ToUpper() == reviewCreate.Title.Trim().ToUpper());
 
         if (review != null)
         {

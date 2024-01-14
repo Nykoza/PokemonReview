@@ -9,4 +9,6 @@ public interface IReviewerRepository
     Task<Reviewer> GetReviewer(int reviewerId);
     Task<ICollection<Review>> GetReviewsByReviewer(int reviewerId);
     bool ReviewerExists(int reviewerId);
+    bool CreateReviewer(Reviewer reviewer);
+    bool Save();
 }

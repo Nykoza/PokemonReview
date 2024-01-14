@@ -80,7 +80,7 @@ public class CountryController : ControllerBase
 
         var country = _countryRepository
             .GetCountries()
-            .FirstOrDefault(c => c.Name.Trim().ToUpper() == countryCreate.Name.Trim());
+            .FirstOrDefault(c => c.Name.Trim().ToUpper() == countryCreate.Name.Trim().ToUpper());
 
         if (country != null)
         {

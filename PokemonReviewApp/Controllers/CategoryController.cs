@@ -67,7 +67,7 @@ public class CategoryController: ControllerBase
 
         var category = _categoryRepository
             .GetCategories()
-            .FirstOrDefault(c => c.Name.Trim().ToUpper() == categoryCreate.Name.Trim());
+            .FirstOrDefault(c => c.Name.Trim().ToUpper() == categoryCreate.Name.Trim().ToUpper());
 
         if (category != null)
         {
