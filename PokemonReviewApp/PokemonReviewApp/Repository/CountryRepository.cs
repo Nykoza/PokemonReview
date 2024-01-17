@@ -52,7 +52,13 @@ public class CountryRepository: ICountryRepository
         return Save();
     }
 
+    public bool DeleteCountry(Country country)
+    {
+        _context.Remove(country);
+        return Save();
+    }
 
+    
     public bool Save()
     {
         var saved = _context.SaveChanges();
