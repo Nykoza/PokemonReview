@@ -27,6 +27,8 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddCors(options => options.AddPolicy("MyPolicy", _builder => _builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyHeader()));
+
 var app = builder.Build();
 
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
@@ -59,5 +61,7 @@ if (app.Environment.IsDevelopment())
     app.MapGet("/debug/routes", (IEnumerable<EndpointDataSource> endpointSources) =>
         string.Join("\n", endpointSources.SelectMany(source => source.Endpoints)));
 }
+
+app.UseCors("MyPolicy");
 
 app.Run();
