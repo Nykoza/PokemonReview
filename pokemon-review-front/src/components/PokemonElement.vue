@@ -12,7 +12,7 @@ defineProps<Props>()
   <v-card>
     <v-img src="./assets/pikachu.png" />
     <v-card-title>{{ pokemon.name }}</v-card-title>
-    <v-card-subtitle>Born the {{ pokemon.birthdate }}</v-card-subtitle>
+    <v-card-subtitle>Born the {{ new Date(pokemon.birthDate).toDateString() }}</v-card-subtitle>
   </v-card>
 </template>
 

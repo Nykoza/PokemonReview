@@ -3,7 +3,7 @@ import Dashboard from '@/components/Dashboard.vue'
 </script>
 
 <template>
-  <v-container>
+  <v-container class="bg-amber-accent-1">
     <Dashboard class="dashboard" />
   </v-container>
 </template>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Owner } from '@/models/owner'
+import type { Category } from '@/models/category'
 
 interface Props {
-  owner: Owner
+  category: Category
 }
 
 defineProps<Props>()
@@ -11,8 +11,7 @@ defineProps<Props>()
 <template>
   <v-card>
     <v-img src="./assets/pikachu.png" />
-    <v-card-title>{{ owner.name }}</v-card-title>
-    <v-card-subtitle>Work at {{ owner.gym }}</v-card-subtitle>
+    <v-card-title>{{ category.name }}</v-card-title>
   </v-card>
 </template>
 
