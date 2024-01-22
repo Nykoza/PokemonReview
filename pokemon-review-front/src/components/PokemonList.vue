@@ -17,7 +17,9 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <PokemonElement v-for="pokemon in pokemons" :key="pokemon" :pokemon="pokemon" />
+  <v-container class="list-border">
+    <PokemonElement v-for="pokemon in pokemons" :key="pokemon" :pokemon="pokemon" />
+  </v-container>
 </template>
 
 <style scoped></style>

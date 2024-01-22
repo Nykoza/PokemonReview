@@ -17,7 +17,9 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <OwnerElement :owner="owner" v-for="owner in owners" :key="owner" />
+  <v-container class="list-border">
+    <OwnerElement :owner="owner" v-for="owner in owners" :key="owner" />
+  </v-container>
 </template>
 
 <style scoped></style>

@@ -17,7 +17,9 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <CategoryElement :category="category" v-for="category in categories" :key="category" />
+  <v-container class="list-border">
+    <CategoryElement :category="category" v-for="category in categories" :key="category" />
+  </v-container>
 </template>
 
 <style scoped></style>

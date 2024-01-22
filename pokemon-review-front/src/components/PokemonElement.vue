@@ -9,11 +9,17 @@ defineProps<Props>()
 </script>
 
 <template>
-  <v-card>
+  <div>
     <v-img src="./assets/pikachu.png" />
-    <v-card-title>{{ pokemon.name }}</v-card-title>
-    <v-card-subtitle>Born the {{ new Date(pokemon.birthDate).toDateString() }}</v-card-subtitle>
-  </v-card>
+    <v-card-title class="text">{{ pokemon.name }}</v-card-title>
+    <v-card-subtitle class="text"
+      >Born the {{ new Date(pokemon.birthDate).toDateString() }}</v-card-subtitle
+    >
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.text {
+  color: #55828b;
+}
+</style>

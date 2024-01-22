@@ -9,10 +9,14 @@ defineProps<Props>()
 </script>
 
 <template>
-  <v-card>
+  <div>
     <v-img src="./assets/pikachu.png" />
-    <v-card-title>{{ category.name }}</v-card-title>
-  </v-card>
+    <v-card-title class="text">{{ category.name }}</v-card-title>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.text {
+  color: #55828b;
+}
+</style>

@@ -6,8 +6,8 @@ import CategoryList from '@/components/CategoryList.vue'
 </script>
 
 <template>
-  <v-container class="w-100 bg-surface-variant">
-    <v-row>
+  <v-container>
+    <v-row justify="space-between">
       <v-col>
         <PokemonList />
       </v-col>

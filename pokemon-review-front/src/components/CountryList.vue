@@ -17,7 +17,9 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <CountryElement :country="country" v-for="country in countries" :key="country" />
+  <v-container class="list-border">
+    <CountryElement :country="country" v-for="country in countries" :key="country" />
+  </v-container>
 </template>
 
 <style scoped></style>

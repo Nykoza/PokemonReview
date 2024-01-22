@@ -21,15 +21,20 @@ a,
   }
 }
 
+.list-border {
+  border: 1px solid #55828b;
+  border-radius: 16px;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;
     place-items: center;
+    background-color: #201A23;
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+    background-color: #201A23;
   }
 }
