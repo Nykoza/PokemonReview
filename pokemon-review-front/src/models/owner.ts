@@ -6,3 +6,8 @@ export interface Owner {
   gym: string
   country: Country
 }
+
+export interface OwnerCreatePayload {
+  name: string
+  gym: string
+}

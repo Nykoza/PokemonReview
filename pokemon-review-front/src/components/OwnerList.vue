@@ -3,6 +3,7 @@ import { onBeforeMount, ref } from 'vue'
 import { useUnsecuredGet } from '@/hooks/useUnsecuredGet'
 import type { Owner } from '@/models/owner'
 import OwnerElement from '@/components/OwnerElement.vue'
+import router from '@/router'
 
 const owners = ref<Owner[]>()
 
@@ -19,6 +20,8 @@ onBeforeMount(() => {
 <template>
   <v-container class="list-border">
     <OwnerElement :owner="owner" v-for="owner in owners" :key="owner" />
+
+    <button @click="router.push('owners/create')">Add Owner</button>
   </v-container>
 </template>
 
